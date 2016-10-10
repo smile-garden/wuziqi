@@ -1,0 +1,328 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.shade{
+	width:100%;
+	height:100vh;
+	position:absolute;
+	overflow:hidden;
+	z-index:10;
+}
+.shade .doorleft{
+	width:50%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(../img/left.jpg) no-repeat 0/100% 100%;
+}
+.shade .lmove{
+	animation:doorl 2s ease forwards;
+}
+.shade .lmovehl{
+	animation:doorlh 2s ease forwards;
+}
+.shade .doorright{
+	width:50%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:50%;
+	background:url(../img/right.jpg) no-repeat 0/100% 100%;
+}
+.shade .rmove{
+	animation:doorr 2s ease forwards;	
+}
+.shade .rmovehl{
+	animation:doorrh 2s ease forwards;	
+}
+@keyframes doorl{
+	0%{left:0;}
+	100%{left:-50%;}
+}
+@keyframes doorr{
+	0%{left:50%;}
+	100%{left:100%;}
+}
+@keyframes doorlh{
+	0%{left:-50%;}
+	100%{left:0;}
+}
+@keyframes doorrh{
+	0%{left:100%;}
+	100%{left:50%;}
+}
+.shade p{
+	width:260px;
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:60px;
+	margin:auto;
+	font:bold 50px serif;
+	text-align:center;
+	cursor:pointer;	
+	text-shadow: 0 1px hsl(0,0%,95%),
+	             0 2px hsl(0,0%,80%),
+	             0 3px hsl(0,0%,75%),
+	             0 4px hsl(0,0%,70%),
+	             0 5px hsl(0,0%,65%),
+	             0 5px 10px white;
+	transition:1s;
+}
+.shade p:hover { 
+	color:rgba(251,220,100,1);
+	text-shadow: 0 0 2px rgba(251,220,100,1), 0 0 3px rgba(251,220,100,1);
+}
+.shade .imgp{
+	animation:touming 2s ease forwards;
+}
+.shade .imgph{
+	animation:touminghl 2s ease forwards;
+}
+@keyframes touming{
+	0%{opacity:1;transform:translate3d(0,0,0);}
+	100%{opacity:0;transform:translate3d(-800px,0,0);}
+}
+@keyframes touminghl{
+	0%{opacity:1;transform:translate3d(0,0,0);}
+	100%{opacity:0;transform:translate3d(800px,0,0);}
+}
+.shade span{
+	/*display:inline-block;*/
+	width:450px;
+	overflow:hidden;
+	position:absolute;
+	left:0;
+	right:0;
+	margin:auto;
+	top:60px;
+	font:bold 60px serif;
+	text-align:left;
+	cursor:pointer;
+	text-shadow: 0 1px hsl(0,0%,95%),
+	             0 2px hsl(0,0%,80%),
+	             0 3px hsl(0,0%,75%),
+	             0 4px hsl(0,0%,70%),
+	             0 5px hsl(0,0%,65%),
+	             0 5px 10px white;
+    white-space: nowrap;
+	animation: typing 3s steps(100),
+	           caret 1s steps(10) infinite;
+}
+.shade .imgs{
+	animation:touming 2s ease forwards;
+}
+@keyframes typing {
+	from { width: 0 }
+}
+@keyframes caret {
+	50% { border-right-color: transparent; }
+}
+.shade img{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	cursor:pointer;
+	animation:qpzhuan 3s ease forwards;
+}
+.shade .imgz{
+	animation:feili 2s ease forwards;
+}
+@keyframes qpzhuan{
+	0%{
+		transform:scale(0,0) rotateZ(45deg);
+	}
+	50%{
+		transform:scale(0.5,0.5) rotateZ(36000deg)
+	}
+	100%{
+		transform:scale(1,1) rotateZ(45deg);
+	}
+}
+@keyframes feili{
+	0%{
+		transform:translate3d(0,0,0) scale(1,1) rotateZ(45deg);
+	}
+	100%{
+		transform:translate3d(1000px,-500px,0) scale(0,0) rotateZ(360000deg);
+	}	
+}
+.container{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100vh;
+	background:url(../img/beijing.png);
+	background-size:100% 100%;
+}
+.container .qi{
+	width:40px;
+	height:40px;
+	background:#dcb065;
+	border:2px solid #8f6125;
+	position:absolute;
+	top:-100px;
+	left:180px;
+}
+.container .addhei{
+	top:130px;
+	transition:top .8s ease-in-out .2s;
+}
+.container .addbai{
+	top:330px;
+	transition:top .8s ease-in-out .2s;
+}
+.container .tishi{
+	width:300px;
+	height:150px;
+	border-radius:6px;
+	background:url(../img/beijing.png) no-repeat 0/100% 100%;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	opacity:0;
+	z-index:-1;
+}
+.container .tishishow{
+	animation:show 1s ease forwards;
+}
+@keyframes show{
+	0%{opacity:0;z-index:20;}
+	100%{opacity:1;z-index:20;}
+}
+.container .tishi span{
+	width:100%;
+	height:90px;
+	text-align:center;
+	line-height:90px;
+	float:left;
+	color:rgba(255,10,10,1);
+}
+.container .tishi .select{
+	width:100%;
+	height:60px;
+	float:left;
+}
+.container .tishi .select li{
+	height:30px;
+	width:80px;
+	background-image:linear-gradient(#8f6125,#dcb065);
+	border-radius:3px;
+	margin:10px 25px;
+	color:rgba(255,226,69,1);
+	font-size:12px;
+	text-align:center;
+	line-height:30px;
+	cursor:pointer;
+	float:left;
+}
+.container .tishi .select .no{
+	float:right;
+	margin-right:25px;
+}
+#canvas{
+	border:16px solid #8f6125;
+	border-radius:3px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	background:#dcb065;
+	cursor:pointer;
+}
+.canvas1,.canvas2{
+	/*border:1px solid #000;*/
+	position:absolute;
+	top:200px;
+	left:150px;
+	background:url(../img/biaopan.png);
+}
+.canvas2{
+	top:400px;
+}
+.anniubox{
+	width:200px;
+	height:430px;
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:80px;
+	margin:auto;
+	/*background:pink;	*/
+}
+.button{
+	display:inline-block;
+	padding:10px 20px;
+	margin:10px;
+	border-radius:3px;
+	color:rgba(255,226,69,1);
+	float:left;
+	cursor:pointer;
+	box-shadow:0px 3px 0 #8f6125;
+	background-image:linear-gradient(#8f6125,#dcb065);
+	transition:transform .8s ease-in-out;
+}
+.button:hover{
+	background:#dcb065;
+}
+.active{
+	animation:anniu .2s ease-in-out forwards;
+}
+@keyframes anniu{
+	0%{transform:translate3d(0,0,0) scale(1.2,1.2);box-shadow:0px 3px 0 #8f6125;color:rgba(255,226,69,1);font-weight:normal;}
+	100%{transform:translate3d(0,3px,0) scale(1.2,1.2);box-shadow:0 0 0;background:#8f6125;color:#fff;font-weight:bold;}
+}
+.jieshaoinfo{
+	width:300px;
+	height:150px;
+	border-radius:6px;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	margin:auto;
+	font-size:12px;
+	line-height:20px;
+	color:rgba(255,10,19,1);
+	background:url(../img/beijing.png) no-repeat 0/100% 100%;
+	opacity:0;
+	z-index:-10;
+}
+.jieshaoinfo p{
+	padding:2px 20px;
+}
+.jieshaoinfo .js{
+	margin-top:12px;
+}
+.jieshaoinfo span{
+	display:inline-block;
+	width:60px;
+	height:26px;
+	border-radius:3px;
+	text-align:center;
+	line-height:26px;
+	color:rgba(255,226,69,1);
+	background-image:linear-gradient(#8f6125,#dcb065);
+	position:absolute;
+	left:0;
+	right:0;
+	bottom:10px;
+	margin:auto;
+	cursor:pointer;
+}
+.jsshow{
+	animation:show 1s ease forwards;
+}

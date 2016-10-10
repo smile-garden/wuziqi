@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>五子棋</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+    <audio src="bjmusic.mp3"></audio>
+    <audio src="shengyin.mp3"></audio>
+    <div class="shade">
+	  	<div class="doorleft"></div>
+	  	<div class="doorright"></div>
+	  	<span>欢迎来玩五子棋</span>
+	  	<img src="img/qipan.png" alt="">
+	  	<p>进入游戏</p>
+  	</div>
+    <div class="container">
+		<canvas width="600" height="600" id="canvas"></canvas>
+		<canvas width="100" height="100" id="canvas1" class="canvas1"></canvas>
+		<canvas width="100" height="100" id="canvas2" class="canvas1 canvas2"></canvas>
+		<div class="tishi">
+			<span></span>
+			<div class="select">
+				<li class="yes">观看棋谱</li>
+				<li class="no">重新开始</li>
+			</div>
+		</div>
+		<div class="qi hei"><img src="img/hei.png" alt=""></div>
+		<div class="qi bai"><img src="img/bai.png" alt=""></div>
+		<div class="anniubox">
+	    	<div class="start button">开始游戏</div>
+	    	<div class="duizhan button">人人对战</div>
+		    <div class="restart button">重新开始</div>
+		    <div class="jieshao button">游戏介绍</div>
+		    <div class="bjmusic button">背景音乐</div>
+		    <div class="gameover button">退出游戏</div>
+        </div>
+        <div class="jieshaoinfo">
+        	<p class="js">1.黑先白后，双方落子时间为6秒</p>
+        	<p>2.规定时间内未落子视为认输</p>
+        	<p>3.任意一方先在棋盘上形成横向、竖向、斜向连续的五颗棋子且相同颜色的的一方获胜。</p>
+        	<span>知道了</span>
+        </div>
+    </div>
+</body>
+</html>
